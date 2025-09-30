@@ -14,7 +14,7 @@ const app  = express()
 app.use(express.json())
 app.use(cookieParser());
 app.use(cors({
-    origin:'https://portfolio-inky-two-60.vercel.app/',
+    origin:'https://portfolio-inky-two-60.vercel.app',
     credentials:true
 }))
 
