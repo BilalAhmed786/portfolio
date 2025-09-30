@@ -21,7 +21,7 @@ const AdminDashboard: React.FC = () => {
   useEffect(() => {
     const fetchLeads = async () => {
       try {
-        const res = await axios.get("http://localhost:4000/api/contact", {
+        const res = await axios.get("https://portfolio-ydi2.onrender.com/api/contact", {
           withCredentials: true, // if using cookies for auth
         });
         setLeads(res.data);
@@ -72,7 +72,7 @@ const AdminDashboard: React.FC = () => {
   const handleLogout = async() => {
 
 
-    await axios.post("http://localhost:4000/api/logout", {}, { withCredentials: true });
+    await axios.post("https://portfolio-ydi2.onrender.com/api/logout", {}, { withCredentials: true });
 
     navigate("/login");
   };

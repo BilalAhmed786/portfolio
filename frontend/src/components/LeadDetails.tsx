@@ -18,7 +18,7 @@ const LeadDetails: React.FC = () => {
   useEffect(() => {
     const fetchLead = async () => {
       try {
-        const res = await axios.get(`http://localhost:4000/api/contact/${id}`, {
+        const res = await axios.get(`https://portfolio-ydi2.onrender.com/api/contact/${id}`, {
           withCredentials: true,
         });
         setLead(res.data);

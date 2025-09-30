@@ -21,7 +21,7 @@ const Contact: React.FC = () => {
     setStatus("");
 
     try {
-      const res = await axios.post("http://localhost:4000/api/contact", formData);
+      const res = await axios.post("https://portfolio-ydi2.onrender.com/api/contact", formData);
 
       if (res.data.success) {
         setStatus(res.data.success);

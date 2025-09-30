@@ -13,7 +13,7 @@ const Protectedroute = ({Component}:{Component:any}) => {
 
     try{
 
-         await axios.get('http://localhost:4000/api/authuser')
+         await axios.get('https://portfolio-ydi2.onrender.com/api/authuser')
 
 
     }catch(error:any){
