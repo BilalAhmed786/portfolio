@@ -11,7 +11,9 @@ const Contact: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -21,7 +23,11 @@ const Contact: React.FC = () => {
     setStatus("");
 
     try {
-      const res = await axios.post("https://portfolio-ydi2.onrender.com/api/contact", formData);
+      const res = await axios.post(
+        "https://portfolio-ydi2.onrender.com/api/contact",
+        formData,
+        { withCredentials: true },
+      );
 
       if (res.data.success) {
         setStatus(res.data.success);
@@ -40,8 +46,10 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className="py-20 bg-white text-center">
       <h2 className="text-3xl font-bold">Contact Me</h2>
-      <p className="mt-4 text-gray-600">Interested in working together? Let’s talk!</p>
-      
+      <p className="mt-4 text-gray-600">
+        Interested in working together? Let’s talk!
+      </p>
+
       <form onSubmit={handleSubmit} className="mt-8 max-w-md mx-auto space-y-4">
         <input
           type="text"
@@ -50,7 +58,6 @@ const Contact: React.FC = () => {
           value={formData.name}
           onChange={handleChange}
           className="w-full border px-4 py-2 rounded-md"
-       
         />
         <input
           type="email"
@@ -59,7 +66,6 @@ const Contact: React.FC = () => {
           value={formData.email}
           onChange={handleChange}
           className="w-full border px-4 py-2 rounded-md"
-          
         />
         <textarea
           name="message"
@@ -67,9 +73,8 @@ const Contact: React.FC = () => {
           value={formData.message}
           onChange={handleChange}
           className="w-full border px-4 py-2 rounded-md h-32"
-      
         ></textarea>
-        
+
         <button
           type="submit"
           disabled={loading}
