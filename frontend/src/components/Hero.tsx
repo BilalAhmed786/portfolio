@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
       >
-        A passionate MERN Stack Developer skilled at building modern, scalable,
+        A passionate MERN Stack/Nextjs Developer skilled at building modern, scalable,
         and user-friendly web applications with React & TypeScript.
       </motion.p>
 
