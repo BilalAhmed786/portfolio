@@ -57,7 +57,7 @@ const projects: Project[] = [
     title: "Real-Time Chat App",
     description:
       "A WhatsApp-inspired real-time messaging application supporting private conversations, authentication and instant message delivery using WebSockets and Socket.IO.",
-    demo: "https://whatsappweb.bilal-ahmed4817.workers.dev",
+    demo: "https://whatsappweb.fasst-sallar.workers.dev",
     code: "https://github.com/BilalAhmed786/whatsappweb",
     technologies: [
       "React",
