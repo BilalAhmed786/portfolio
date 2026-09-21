@@ -75,7 +75,7 @@ const projects: Project[] = [
     title: "Mini Facebook",
     description:
       "A full-stack social media application featuring posts, comments, user interactions and real-time chat functionality.",
-    demo: "https://facebokmini.netlify.app",
+    demo: "https://facebookclone.fasst-sallar.workers.dev",
     code: "https://github.com/BilalAhmed786/facebookclone",
     technologies: [
       "React",
